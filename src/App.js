@@ -1,0 +1,66 @@
+import React, { useState } from "react";
+import "./App.css";
+import { useEffect } from "react";
+import Mymodal from "./components/modal/Mymodal";
+import Post from "./components/posts/Post";
+import Nav from "./components/navigation/Nav";
+
+function App() {
+  const [text, setText] = useState("");
+
+  const [posts, setPosts] = useState(() => {
+    const saved = localStorage.getItem("name");
+    const initialValue = JSON.parse(saved);
+    return initialValue || [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem("name", JSON.stringify(posts));
+  }, [posts]);
+
+  function AddPost(e) {
+    e.preventDefault();
+    const obj = {
+      text,
+    };
+    setPosts([...posts, obj]);
+  }
+
+  function del(index) {
+    console.log(index);
+    setPosts([...posts.slice(0, index), ...posts.slice(index + 1)]);
+  }
+
+  const [isActive, setActive] = useState(false);
+
+  const toggleClass = () => {
+    setActive(!isActive);
+  };
+
+  return (
+    <div className="App">
+      <Nav/>
+      <form>
+        <input
+          value={text}
+          placeholder="введите пост"
+          onChange={(e) => setText(e.target.value)}
+        />
+       <button onClick={AddPost}> создать пост</button>
+      </form>
+
+      {posts.map((e, index) => (
+        <Post
+          key={index}
+          text={e.text}
+          del={() => del(index)}
+          tog={toggleClass}
+        />
+      ))}
+
+      <Mymodal isActive={isActive} posts={posts} del={del} />
+    </div>
+  );
+}
+
+export default App;
