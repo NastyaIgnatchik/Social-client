@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import "./App.css";
 import { useEffect } from "react";
 import Mymodal from "./components/modal/Mymodal";
 import Post from "./components/posts/Post";
 import Nav from "./components/navigation/Nav";
+import Myinput from "./components/input/Myinput";
 
 function App() {
   const [text, setText] = useState("");
@@ -39,15 +39,12 @@ function App() {
 
   return (
     <div className="App">
-      <Nav/>
-      <form>
-        <input
-          value={text}
-          placeholder="введите пост"
-          onChange={(e) => setText(e.target.value)}
-        />
-       <button onClick={AddPost}> создать пост</button>
-      </form>
+      <Nav />
+      <Myinput
+        value={text}
+        onchange={(e) => setText(e.target.value)}
+        onclick={AddPost}
+      />
 
       {posts.map((e, index) => (
         <Post

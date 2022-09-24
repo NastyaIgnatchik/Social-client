@@ -1,32 +1,63 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
 
+export const ContainerReg = styled.div`
+  width: 40%;
+  margin: 15% 30% 0 30%;
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+`;
+export const Title = styled.p`
+  text-align: center;
+  font-size: 20px;
+  padding-top: 15px;
+`;
+export const FormReg = styled.form`
+  width: 60%;
+  line-height: 40px;
+  margin: 0 20% 0 20%;
+`;
+export const Input = styled.input`
+  float: right;
+  margin-top: 10px;
+  width: 40%;
+`;
+export const Button = styled.button`
+  width: 20%;
+  margin: 30px 40% 20px 40%;
+  height: 30px;
+  background: rgb(212, 197, 247);
+  cursor: pointer;
+`;
+export const LinkA = styled.p`
+  text-align: center;
+  padding-bottom: 10px;
+  margin-top: 5px;
+`;
 const Login = () => {
-
   return (
-    <div>
-      <div className="containerReg">
-        <p className="title"> Log in </p>
-        <form className="formReg">
-          Email:
-          <input type="email" placeholder="Email" />
-          <br />
-          Password:
-          <input type="password" placeholder="Password" />
-          <br />
-        </form>
-        <button className="saveProfile enter">
-          <Link to="/" style={{ textDecoration: "none", color: "black" }}>
-            log in
-          </Link>
-        </button>
-        <p className="link">
-          <Link to="/Regpage" style={{ textDecoration: "none", color: "black" }}>
-            You don't have an account yet
-          </Link>
-        </p>
-      </div>
-    </div>
+    <ContainerReg>
+      <Title>Log in</Title>
+      <FormReg>
+        Email:
+        <Input type="email" placeholder="Email" />
+        <br />
+        Password:
+        <Input type="password" placeholder="Password" />
+        <br />
+      </FormReg>
+      <Button>
+        <Link to="/" style={{ textDecoration: "none", color: "black" }}>
+          log in
+        </Link>
+      </Button>
+      <LinkA>
+        <Link to="/Regpage" style={{ textDecoration: "none", color: "black" }}>
+          You don't have an account yet
+        </Link>
+      </LinkA>
+    </ContainerReg>
   );
 };
 

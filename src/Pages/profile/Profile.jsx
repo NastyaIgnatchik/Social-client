@@ -1,21 +1,59 @@
 import React from "react";
-import "./Profile.css";
 import avatar from "../../assets/img/avatar.jpg";
 import { useState } from "react";
 import Mybutton from "../../components/button/Mybutton";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
+
+const Container = styled.div`
+  background: white;
+  width: 60%;
+  margin: 0 20% 0 20%;
+  position: relative;
+`;
+const Text = styled.div`
+  text-align: center;
+  position: absolute;
+  left: 38%;
+  top: 25%;
+  font-size: 20px;
+`;
+const Avatar = styled.img`
+  width: 40%;
+  margin: 15px 30% 0 30%;
+  &:hover {
+    opacity: 0.4;
+  }
+`;
+const Form = styled.form`
+  width: 50%;
+  margin: 30px 25% 0 25%;
+  line-height: 47px;
+`;
+const Input = styled.input`
+  float: right;
+  margin: 10px 0 10px 0;
+  width: 30%;
+`;
+const SaveProfil = styled.button`
+  width: 20%;
+  margin: 30px 40% 30px 40%;
+  height: 30px;
+  background: rgb(212, 197, 247);
+  cursor: pointer;
+`;
+const Hr = styled.hr`
+  width: 80%;
+`;
 
 const Profil = () => {
-  const [mouseMove, SetmouseMove] = useState(false);
   const [text, Settext] = useState();
 
   function upload(event) {
-    SetmouseMove(!mouseMove);
     Settext("Upload new avatar");
   }
 
-  function cansel() {
-    SetmouseMove(!mouseMove);
+  function cansel(event) {
     Settext("");
   }
 
@@ -31,36 +69,36 @@ const Profil = () => {
           log out
         </Link>
       </Mybutton>
-      <div className="container">
-        <div className="text"> {text} </div>
-        <img
-          className={mouseMove ? "opacity" : "avatar"}
+      <Container>
+        <Text>{text}</Text>
+
+        <Avatar
           src={avatar}
           alt="avatar"
-          onMouseEnter={upload}
-          onMouseLeave={cansel}
+          onMouseEnter={(e) => upload(e.target)}
+          onMouseLeave={(e) => cansel(e.target)}
         />
-        <hr />
-        <form className="form">
+
+        <Hr />
+        <Form>
           Name:
-          <input type="text" placeholder="Enter your name" /> <br />
+          <Input type="text" placeholder="Enter your name" />
+          <br />
           Surname:
-          <input type="text" placeholder="Enter your surname" />
+          <Input type="text" placeholder="Enter your surname" />
           <br />
           Age:
-          <input type="number" placeholder="Enter your age" />
+          <Input type="number" placeholder="Enter your age" />
           <br />
           Email:
-          <input type="email" placeholder="Enter your email" />
+          <Input type="email" placeholder="Enter your email" />
           <br />
           Change password:
-          <input type="password" placeholder="Enter new password" />
+          <Input type="password" placeholder="Enter your password" />
           <br />
-        </form>
-        <button className="saveProfile" type="submit">
-          Save profile
-        </button>
-      </div>
+        </Form>
+        <SaveProfil type="submit">Save profile</SaveProfil>
+      </Container>
     </div>
   );
 };
