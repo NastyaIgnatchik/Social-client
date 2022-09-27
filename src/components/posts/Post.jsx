@@ -49,7 +49,7 @@ const Post = (props) => {
 
   return (
     <Posts>
-      <Cross onClick={props.del}>+</Cross>
+      <Cross onClick={props.tog}>+</Cross>
       <Title>Cody</Title>
       <span>{props.text}</span>
       <Likes>
