@@ -24,6 +24,7 @@ function App() {
       text,
     };
     setPosts([...posts, obj]);
+
   }
 
   function del(index) {
@@ -37,6 +38,7 @@ function App() {
     setActive(!isActive);
   };
 
+
   return (
     <div className="App">
       <Nav />
@@ -47,12 +49,16 @@ function App() {
       />
 
       {posts.map((e, index) => (
+
         <Post
           key={index}
+          id={index+1}
           text={e.text}
           del={() => del(index)}
           tog={toggleClass}
+
         />
+
       ))}
 
       <Mymodal isActive={isActive} posts={posts} del={del} />
