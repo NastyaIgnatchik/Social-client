@@ -1,50 +1,9 @@
 import React from "react";
 import avatar from "../../assets/img/avatar.jpg";
 import { useState } from "react";
-import Mybutton from "../../components/button/Mybutton";
+import Mybutton from "../../components/button/Mybutton.jsx";
 import { Link } from "react-router-dom";
-import styled from "styled-components";
-
-const Container = styled.div`
-  background: white;
-  width: 60%;
-  margin: 0 20% 0 20%;
-  position: relative;
-`;
-const Text = styled.div`
-  text-align: center;
-  position: absolute;
-  left: 38%;
-  top: 25%;
-  font-size: 20px;
-`;
-const Avatar = styled.img`
-  width: 40%;
-  margin: 15px 30% 0 30%;
-  &:hover {
-    opacity: 0.4;
-  }
-`;
-const Form = styled.form`
-  width: 50%;
-  margin: 30px 25% 0 25%;
-  line-height: 47px;
-`;
-const Input = styled.input`
-  float: right;
-  margin: 10px 0 10px 0;
-  width: 30%;
-`;
-const SaveProfil = styled.button`
-  width: 20%;
-  margin: 30px 40% 30px 40%;
-  height: 30px;
-  background: rgb(212, 197, 247);
-  cursor: pointer;
-`;
-const Hr = styled.hr`
-  width: 80%;
-`;
+import {Container,Text,Avatar, Form, Input, SaveProfil,Hr} from './Profile.js';
 
 const Profil = () => {
   const [text, Settext] = useState();

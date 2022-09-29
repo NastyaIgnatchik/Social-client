@@ -1,5 +1,5 @@
 import React from 'react';
-import Mybutton from '../button/Mybutton';
+import Mybutton from '../button/Mybutton.jsx';
 import { Link } from "react-router-dom";
 
 const Nav = () => {

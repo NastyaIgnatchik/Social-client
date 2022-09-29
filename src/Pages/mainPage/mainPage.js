@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import Mymodal from "../../components/modal/Mymodal.jsx";
 import Post from "../../components/posts/Post.jsx";
 import Nav from "../../components/navigation/Nav.jsx";
-import Myinput from "../../components/input/Myinput";
+import Myinput from "../../components/input/Myinput.jsx";
 
 function MainPage() {
   const [text, setText] = useState("");
