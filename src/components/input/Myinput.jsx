@@ -1,14 +1,15 @@
 import React from "react";
+import {Area,Button} from './myInput.js'
 
 const Myinput = (props) => {
   return (
     <form>
-      <input
+      <Area
         value={props.value}
         placeholder="введите пост"
         onChange={props.onchange}
       />
-      <button onClick={props.onclick}> создать пост</button>
+      <Button onClick={props.onclick}> создать пост</Button>
     </form>
   );
 };

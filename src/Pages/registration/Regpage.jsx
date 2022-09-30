@@ -7,7 +7,7 @@ import {
   Input,
   Button,
   LinkA,
-} from "../Login/Login.jsx";
+} from "../Login/Login.js";
 
 const Regpage = () => {
   return (

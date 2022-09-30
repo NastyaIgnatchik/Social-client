@@ -1,14 +1,7 @@
 import React from 'react';
-import styled from 'styled-components'; 
+import {But} from './myButton.js'
 
-const But = styled.button`
-display: inline;
-float: right;
-margin: 0 10px 0 0 ;
-background:rgb(212, 197, 247);
-width: 8%;
-height: 30px;
-`
+
 const Mybutton = (props) => {
 
 return (

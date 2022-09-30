@@ -1,21 +1,21 @@
-import React, { useState } from "react";
-import { useEffect } from "react";
-import Mymodal from "../../components/modal/Mymodal.jsx";
-import Post from "../../components/posts/Post.jsx";
-import Nav from "../../components/navigation/Nav.jsx";
-import Myinput from "../../components/input/Myinput.jsx";
+import React, { useState } from 'react';
+import { useEffect } from 'react';
+import Mymodal from '../../components/modal/Mymodal.jsx';
+import Post from '../../components/posts/Post.jsx';
+import Nav from '../../components/navigation/Nav.jsx';
+import Myinput from '../../components/input/Myinput.jsx';
 
 function MainPage() {
-  const [text, setText] = useState("");
+  const [text, setText] = useState('');
 
   const [posts, setPosts] = useState(() => {
-    const saved = localStorage.getItem("name");
+    const saved = localStorage.getItem('name');
     const initialValue = JSON.parse(saved);
     return initialValue || [];
   });
 
   useEffect(() => {
-    localStorage.setItem("name", JSON.stringify(posts));
+    localStorage.setItem('name', JSON.stringify(posts));
   }, [posts]);
 
   function AddPost(e) {
@@ -40,11 +40,6 @@ function MainPage() {
   return (
     <div className="App">
       <Nav />
-      <Myinput
-        value={text}
-        onchange={(e) => setText(e.target.value)}
-        onclick={AddPost}
-      />
 
       {posts.map((e, index) => (
         <Post
@@ -54,7 +49,11 @@ function MainPage() {
           tog={toggleClass}
         />
       ))}
-
+      <Myinput
+        value={text}
+        onchange={(e) => setText(e.target.value)}
+        onclick={AddPost}
+      />
       <Mymodal isActive={isActive} posts={posts} del={del} />
     </div>
   );
