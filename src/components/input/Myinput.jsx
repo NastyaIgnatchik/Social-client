@@ -1,17 +1,18 @@
 import React from "react";
 import {Area,Button} from './myInput.js'
 
-const Myinput = (props) => {
+const Myinput = React.forwardRef((props,ref) => {
   return (
     <form>
       <Area
+        ref={ref}
         value={props.value}
-        placeholder="введите пост"
+        placeholder="create post"
         onChange={props.onchange}
       />
-      <Button onClick={props.onclick}> создать пост</Button>
+      <Button onClick={props.onclick}>Publish</Button>
     </form>
   );
-};
+});
 
 export default Myinput;

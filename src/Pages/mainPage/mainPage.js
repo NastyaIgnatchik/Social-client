@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {  useRef, useState } from "react";
 import { useEffect } from 'react';
 import Mymodal from '../../components/modal/Mymodal.jsx';
 import Post from '../../components/posts/Post.jsx';
@@ -24,6 +24,8 @@ function MainPage() {
       text,
     };
     setPosts([...posts, obj]);
+    setText('')
+
   }
 
   function del(index) {
@@ -36,6 +38,13 @@ function MainPage() {
   const toggleClass = () => {
     setActive(!isActive);
   };
+
+ const div = useRef()
+
+  useEffect(() => {
+   div.current.scrollIntoView(true)
+  }, [posts]);
+
 
   return (
     <div className="App">
@@ -50,11 +59,14 @@ function MainPage() {
         />
       ))}
       <Myinput
+        ref={div}
         value={text}
         onchange={(e) => setText(e.target.value)}
         onclick={AddPost}
       />
+
       <Mymodal isActive={isActive} posts={posts} del={del} />
+
     </div>
   );
 }
