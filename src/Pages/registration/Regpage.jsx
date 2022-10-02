@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   ContainerReg,
   Title,
@@ -7,7 +7,7 @@ import {
   Input,
   Button,
   LinkA,
-} from "../Login/Login.js";
+} from '../Login/Login.js';
 
 const Regpage = () => {
   return (
@@ -26,7 +26,7 @@ const Regpage = () => {
       </FormReg>
       <Button>Enter</Button>
       <LinkA>
-        <Link to="/Login" style={{ textDecoration: "none", color: "black" }}>
+        <Link to="/Login" style={{ textDecoration: 'none', color: 'black' }}>
           You already have an account
         </Link>
       </LinkA>

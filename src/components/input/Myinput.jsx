@@ -1,11 +1,10 @@
-import React from "react";
-import {Area,Button} from './myInput.js'
+import React from 'react';
+import { Area, Button } from './myInput.js';
 
-const Myinput = React.forwardRef((props,ref) => {
+const Myinput = (props) => {
   return (
     <form>
       <Area
-        ref={ref}
         value={props.value}
         placeholder="create post"
         onChange={props.onchange}
@@ -13,6 +12,6 @@ const Myinput = React.forwardRef((props,ref) => {
       <Button onClick={props.onclick}>Publish</Button>
     </form>
   );
-});
+};
 
 export default Myinput;

@@ -1,13 +1,6 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import {
-  ContainerReg,
-  Title,
-  FormReg,
-  Input,
-  Button,
-  LinkA,
-} from "./Login.js";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ContainerReg, Title, FormReg, Input, Button, LinkA } from './Login.js';
 
 const Login = () => {
   return (
@@ -22,12 +15,12 @@ const Login = () => {
         <br />
       </FormReg>
       <Button>
-        <Link to="/" style={{ textDecoration: "none", color: "black" }}>
+        <Link to="/" style={{ textDecoration: 'none', color: 'black' }}>
           log in
         </Link>
       </Button>
       <LinkA>
-        <Link to="/Regpage" style={{ textDecoration: "none", color: "black" }}>
+        <Link to="/Regpage" style={{ textDecoration: 'none', color: 'black' }}>
           You don't have an account yet
         </Link>
       </LinkA>

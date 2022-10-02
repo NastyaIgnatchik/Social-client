@@ -1,7 +1,7 @@
-import React from "react";
-import heart from "../../assets/img/heart.png";
-import { useState } from "react";
-import {Posts,Cross,Title,Likes,Heart} from './Post.js'
+import React from 'react';
+import heart from '../../assets/img/heart.png';
+import { useState } from 'react';
+import { Posts, Cross, Title, Likes, Heart } from './Post.js';
 
 const Post = (props) => {
   const [likes, setLikes] = useState(0);
@@ -14,7 +14,7 @@ const Post = (props) => {
   return (
     <Posts>
       <Cross onClick={props.del}>+</Cross>
-      <Title>Cody</Title>
+      <Title>cody</Title>
       <span>{props.text}</span>
       <Likes>
         <Heart onClick={liking} src={heart} alt="heart" /> {likes}

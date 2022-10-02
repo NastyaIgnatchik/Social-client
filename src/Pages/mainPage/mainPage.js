@@ -1,4 +1,4 @@
-import React, {  useRef, useState } from "react";
+import React, { useState } from 'react';
 import { useEffect } from 'react';
 import Mymodal from '../../components/modal/Mymodal.jsx';
 import Post from '../../components/posts/Post.jsx';
@@ -6,9 +6,9 @@ import Nav from '../../components/navigation/Nav.jsx';
 import Myinput from '../../components/input/Myinput.jsx';
 
 function MainPage() {
-  const [text, setText] = useState('');
+    const [text, setText] = useState('');
 
-  const [posts, setPosts] = useState(() => {
+    const [posts, setPosts] = useState(() => {
     const saved = localStorage.getItem('name');
     const initialValue = JSON.parse(saved);
     return initialValue || [];
@@ -24,8 +24,7 @@ function MainPage() {
       text,
     };
     setPosts([...posts, obj]);
-    setText('')
-
+    setText('');
   }
 
   function del(index) {
@@ -39,34 +38,26 @@ function MainPage() {
     setActive(!isActive);
   };
 
- const div = useRef()
-
-  useEffect(() => {
-   div.current.scrollIntoView(true)
-  }, [posts]);
-
-
   return (
-    <div className="App">
+    <div>
       <Nav />
-
-      {posts.map((e, index) => (
-        <Post
-          key={index}
-          text={e.text}
-          del={() => del(index)}
-          tog={toggleClass}
-        />
-      ))}
       <Myinput
-        ref={div}
         value={text}
         onchange={(e) => setText(e.target.value)}
         onclick={AddPost}
       />
+      {posts
+        .map((e, index) => (
+          <Post
+            key={index}
+            text={e.text}
+            del={() => del(index)}
+            tog={toggleClass}
+          />
+        ))
+        .reverse()}
 
       <Mymodal isActive={isActive} posts={posts} del={del} />
-
     </div>
   );
 }

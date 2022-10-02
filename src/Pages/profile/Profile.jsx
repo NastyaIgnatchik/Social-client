@@ -1,43 +1,49 @@
-import React from "react";
-import avatar from "../../assets/img/avatar.jpg";
-import { useState } from "react";
-import Mybutton from "../../components/button/Mybutton.jsx";
-import { Link } from "react-router-dom";
-import {Container,Text,Avatar, Form, Input, SaveProfil,Hr} from './Profile.js';
+import React from 'react';
+import avatar from '../../assets/img/avatar.jpg';
+import { useState } from 'react';
+import Mybutton from '../../components/button/Mybutton.jsx';
+import { Link } from 'react-router-dom';
+import {
+  Container,
+  Text,
+  Avatar,
+  Form,
+  Input,
+  SaveProfil,
+  Hr,
+} from './Profile.js';
 
 const Profil = () => {
   const [text, Settext] = useState();
 
   function upload(event) {
-    Settext("Upload new avatar");
+    Settext('Upload new avatar');
   }
 
   function cansel(event) {
-    Settext("");
+    Settext('');
   }
 
   return (
     <div>
       <Mybutton>
-        <Link to="/" style={{ textDecoration: "none", color: "black" }}>
+        <Link to="/" style={{ textDecoration: 'none', color: 'black' }}>
           main page
         </Link>
       </Mybutton>
       <Mybutton>
-        <Link to="/Regpage" style={{ textDecoration: "none", color: "black" }}>
+        <Link to="/Regpage" style={{ textDecoration: 'none', color: 'black' }}>
           log out
         </Link>
       </Mybutton>
       <Container>
         <Text>{text}</Text>
-
         <Avatar
           src={avatar}
           alt="avatar"
           onMouseEnter={(e) => upload(e.target)}
           onMouseLeave={(e) => cansel(e.target)}
         />
-
         <Hr />
         <Form>
           Name:
