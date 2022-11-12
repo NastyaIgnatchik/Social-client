@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from "react";
 import avatar from '../../assets/img/avatar.jpg';
 import { useState } from 'react';
 import Mybutton from '../../components/button/Mybutton.jsx';
@@ -13,8 +13,11 @@ import {
   Hr,
 } from './Profile.js';
 
+
+
 const Profil = () => {
   const [text, Settext] = useState();
+  const [tit,settit] = useState();
 
   function upload(event) {
     Settext('Upload new avatar');
@@ -23,6 +26,11 @@ const Profil = () => {
   function cansel(event) {
     Settext('');
   }
+ function Addtit (e) {
+   e.preventDefault();
+   localStorage.setItem('title', JSON.stringify(tit));
+ }
+
 
   return (
     <div>
@@ -47,7 +55,7 @@ const Profil = () => {
         <Hr />
         <Form>
           Name:
-          <Input type="text" placeholder="Enter your name" />
+          <Input type="text" placeholder="Enter your name" value={tit} onChange={(e) => settit(e.target.value)} />
           <br />
           Surname:
           <Input type="text" placeholder="Enter your surname" />
@@ -62,7 +70,7 @@ const Profil = () => {
           <Input type="password" placeholder="Enter your password" />
           <br />
         </Form>
-        <SaveProfil type="submit">Save profile</SaveProfil>
+        <SaveProfil type="submit" onClick={Addtit}>Save profile</SaveProfil>
       </Container>
     </div>
   );
