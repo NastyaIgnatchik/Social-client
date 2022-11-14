@@ -27,24 +27,33 @@ function MainPage() {
     setText('');
   }
 
+
+
+
+
   function del(index) {
     console.log(index);
     setPosts([...posts.slice(0, index), ...posts.slice(index + 1)]);
+
   }
 
-  const [isActive, setActive] = useState(false);
+function keyboard (e){
+  if (e.code=== "Enter") {
+    AddPost(e);
+}
+  }
 
-  const toggleClass = () => {
-    setActive(!isActive);
-  };
+
 
   return (
     <div>
       <Nav />
       <Myinput
+        type="submit"
         value={text}
         onchange={(e) => setText(e.target.value)}
         onclick={AddPost}
+        onkey={keyboard}
       />
       {posts
         .map((e, index) => (
@@ -52,12 +61,12 @@ function MainPage() {
             key={index}
             text={e.text}
             del={() => del(index)}
-            tog={toggleClass}
+
           />
         ))
         .reverse()}
 
-      <Mymodal isActive={isActive} posts={posts} del={del} />
+
     </div>
   );
 }

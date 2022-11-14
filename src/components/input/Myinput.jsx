@@ -8,6 +8,7 @@ const Myinput = (props) => {
         value={props.value}
         placeholder="create post"
         onChange={props.onchange}
+        onKeyPress={props.onkey}
       />
       <Button onClick={props.onclick}>Publish</Button>
     </form>

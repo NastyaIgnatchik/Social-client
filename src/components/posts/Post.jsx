@@ -2,6 +2,7 @@ import React from 'react';
 import heart from '../../assets/img/heart.png';
 import { useState } from 'react';
 import { Posts, Cross, Title, Likes, Heart } from './Post.js';
+import Mymodal from '../modal/Mymodal.jsx';
 
 
 
@@ -15,20 +16,23 @@ const Post = (props) => {
   }
   const Tit = localStorage.getItem('title');
   const tit = JSON.parse(Tit);
-
-
-
+  const [isActive, setActive] = useState(false);
+  const toggleClass = () => {
+    setActive(!isActive);
+  };
 
 
   return (
     <Posts>
-      <Cross onClick={props.del}>+</Cross>
+      <Cross onClick={toggleClass}>+</Cross>
       <Title>{tit}</Title>
       <span>{props.text}</span>
       <Likes>
         <Heart onClick={liking} src={heart} alt="heart" /> {likes}
       </Likes>
+      <Mymodal isActive={isActive}  del={props.del} tog={toggleClass}  />
     </Posts>
+
   );
 };
 
