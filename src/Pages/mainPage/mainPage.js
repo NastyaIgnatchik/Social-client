@@ -1,13 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState} from 'react';
 import { useEffect } from 'react';
-import Mymodal from '../../components/modal/Mymodal.jsx';
 import Post from '../../components/posts/Post.jsx';
-import Nav from '../../components/navigation/Nav.jsx';
-import Myinput from '../../components/input/Myinput.jsx';
+import Navigation from '../../components/navigation/Nav.jsx';
+import Textarea from '../../components/textarea/Textarea.jsx';
+
 
 function MainPage() {
     const [text, setText] = useState('');
-
     const [posts, setPosts] = useState(() => {
     const saved = localStorage.getItem('name');
     const initialValue = JSON.parse(saved);
@@ -20,11 +19,15 @@ function MainPage() {
 
   function AddPost(e) {
     e.preventDefault();
+      if(!text) {
+          return
+      }
     const obj = {
       text,
     };
     setPosts([...posts, obj]);
     setText('');
+
   }
 
 
@@ -45,27 +48,35 @@ function keyboard (e){
 
 
 
+
+
+
+
+
   return (
-    <div>
-      <Nav />
-      <Myinput
+    <div >
+      <Navigation  />
+      <Textarea
         type="submit"
         value={text}
         onchange={(e) => setText(e.target.value)}
         onclick={AddPost}
         onkey={keyboard}
       />
-      {posts
+        <div style={{ marginTop:"200px"}}>
+
+            {posts
         .map((e, index) => (
           <Post
             key={index}
             text={e.text}
             del={() => del(index)}
+            id={index+1}
 
           />
         ))
         .reverse()}
-
+        </div>
 
     </div>
   );

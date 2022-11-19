@@ -3,28 +3,27 @@ import { Link } from 'react-router-dom';
 import {
   ContainerReg,
   Title,
-  FormReg,
-  Input,
-  Button,
   LinkA,
 } from '../Login/Login.js';
+import {ProfileForm, ProfileInput} from "../profile/Profile";
+import {LogButton} from "../../components/button/MyButton.js";
 
-const Regpage = () => {
+const Regpage = (props) => {
   return (
     <ContainerReg>
       <Title>Sign in</Title>
-      <FormReg>
+      <ProfileForm width>
         Email:
-        <Input type="email" placeholder="Email" />
+        <ProfileInput type="email" placeholder="Email" />
         <br />
         Password:
-        <Input type="password" placeholder="Password" />
+        <ProfileInput type="password" placeholder="Password" />
         <br />
         Confirm password:
-        <Input type="password" placeholder="Password" />
+        <ProfileInput type="password" placeholder="Password" />
         <br />
-      </FormReg>
-      <Button>Enter</Button>
+      </ProfileForm>
+      <LogButton>Enter</LogButton>
       <LinkA>
         <Link to="/Login" style={{ textDecoration: 'none', color: 'black' }}>
           You already have an account

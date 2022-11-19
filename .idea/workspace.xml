@@ -1,17 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0b816e51-942b-4103-bd03-f4ae4d7f9b09" name="Changes" comment="add change name">
+    <list default="true" id="0b816e51-942b-4103-bd03-f4ae4d7f9b09" name="Changes" comment="modal and keyPress">
+      <change afterPath="$PROJECT_DIR$/src/assets/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/myHooks/UseComments.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/navigation/nav.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/textarea/Textarea.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Login/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Login/Login.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/mainPage/mainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/mainPage/mainPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/profile/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/profile/Profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/profile/Profile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/registration/Regpage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/registration/Regpage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/button/Mybutton.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/button/myButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/button/MyButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/input/Myinput.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/textarea/Textarea.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/input/myInput.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/modal/Mymodal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/modal/Mymodal.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/modal/myModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/modal/myModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navigation/Nav.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation/Nav.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/posts/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/posts/Post.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/posts/Post.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/posts/Post.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/style.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -30,21 +57,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Naste4ka/Documents/GitHub/Social-client&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\Naste4ka\\Documents\\GitHub\\Social-client\\node_modules\\prettier&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Naste4ka/Documents/GitHub/Social-client",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\Naste4ka\\Documents\\GitHub\\Social-client\\node_modules\\prettier",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2022.2.2\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Naste4ka\Documents\GitHub\Social-client\src\assets\img" />
+      <recent name="C:\Users\Naste4ka\Documents\GitHub\Social-client\src\assets" />
       <recent name="C:\Users\Naste4ka\Documents\GitHub\Social-client\src\Pages" />
       <recent name="C:\Users\Naste4ka\Documents\GitHub\Social-client\Pages" />
       <recent name="C:\Users\Naste4ka\Documents\GitHub\Social-client\src\firstPage" />
@@ -143,5 +173,23 @@
     <MESSAGE value="add textarea up" />
     <MESSAGE value="add change name" />
     <option name="LAST_COMMIT_MESSAGE" value="add change name" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/myHooks/UseComments.js</url>
+          <line>15</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/Pages/mainPage/mainPage.js</url>
+          <line>12</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

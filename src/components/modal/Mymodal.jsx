@@ -1,5 +1,6 @@
 import React from 'react';
 import { Open, Modal, Butt, Close } from './myModal.js';
+import {Button, ModalButton} from "../button/MyButton.js";
 
 const Mymodal = (props) => {
 let Active = props.isActive;
@@ -16,8 +17,8 @@ function foo (){
         <Open onClick={props.tog} >
           <Modal>
             Вы действительно хотите удалить пост?
-            <Butt onClick={foo} > Да</Butt>
-            <Butt onClick={props.tog}> Нет</Butt>
+            <ModalButton onClick={foo} > Да</ModalButton>
+            <ModalButton onClick={props.tog}> Нет</ModalButton>
           </Modal>
         </Open>
       ) : (

@@ -8,7 +8,7 @@ export const Global = createGlobalStyle`
     font-family: 'Poppins';
 }
 body{
-    background-image:url(${img});
+    background:#FFBEBD;
 }
 `;
 export const Fontf = createGlobalStyle`
