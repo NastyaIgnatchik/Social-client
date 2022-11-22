@@ -5,6 +5,7 @@ import {Logo,Navbar,Input} from './nav.js'
 import {Button} from "../button/MyButton.js"
 
 
+
 const Navigation = (props) => {
     const link = props.link;
     const display = props.display;
@@ -19,10 +20,10 @@ const Navigation = (props) => {
 
                 <Logo  src={logo} alt="cat"/>
 
-                <Input value={props.value} onChange={props.onchange} type="text" display={props.display}  />
+                <Input value={props.value} onChange={props.onchange} type="text" display={props.display}  placeholder="search..." />
 
-            <Button  {...props} onClick={props.sb}> Search </Button>
-            <Button margin="50%" >
+
+            <Button margin="57%" >
                 { link ?
                 (<Link to="/" style={{ textDecoration: 'none', color: 'white',width: '100%'}}>
                     Main page

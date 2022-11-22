@@ -23,13 +23,13 @@ width: 100%;
 `
 
 export const Input = styled.input`
-width: 20%;
+width: 17%;
   height: 35px;
   border-radius: 3%;
   outline: none;
   border: none;
   background-color: #FCFCFA;
   display: ${({display}) => display ? 'none' : 'block'};
-  margin-left: 60px;
+  
   
 `
