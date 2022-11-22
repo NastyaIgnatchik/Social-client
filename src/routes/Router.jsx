@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import MainPage from '../Pages/mainPage/mainPage.js';
 import Regpage from '../Pages/registration/Regpage.jsx';

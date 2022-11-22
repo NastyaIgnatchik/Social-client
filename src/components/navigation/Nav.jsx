@@ -10,15 +10,18 @@ const Navigation = (props) => {
     const display = props.display;
 
 
+
+
+
   return (
     <div>
         <Navbar  >
 
                 <Logo  src={logo} alt="cat"/>
 
-                <Input type="text" display={props.display}  />
+                <Input value={props.value} onChange={props.onchange} type="text" display={props.display}  />
 
-            <Button  {...props} > Search </Button>
+            <Button  {...props} onClick={props.sb}> Search </Button>
             <Button margin="50%" >
                 { link ?
                 (<Link to="/" style={{ textDecoration: 'none', color: 'white',width: '100%'}}>

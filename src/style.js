@@ -1,6 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
 
-import img from './assets/img/bg.jpg';
 import pop from './assets/fonts/Poppins-Regular.ttf';
 
 export const Global = createGlobalStyle`

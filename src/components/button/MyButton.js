@@ -19,6 +19,7 @@ export const Button = styled.div`
     border-color: #1A405F;}
   
 `
+
 export const AreaButton = styled(Button)`
 margin: 0 0 0 66%;
   font-size: 14px;

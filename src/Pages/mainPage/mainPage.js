@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, {useMemo, useState} from 'react';
 import { useEffect } from 'react';
 import Post from '../../components/posts/Post.jsx';
 import Navigation from '../../components/navigation/Nav.jsx';
@@ -7,6 +7,7 @@ import Textarea from '../../components/textarea/Textarea.jsx';
 
 function MainPage() {
     const [text, setText] = useState('');
+    const [query,setQuery] = useState();
     const [posts, setPosts] = useState(() => {
     const saved = localStorage.getItem('name');
     const initialValue = JSON.parse(saved);
@@ -46,16 +47,26 @@ function keyboard (e){
 }
   }
 
+  const AllPosts = useMemo(() => {
+        if (query ) {
+
+                const search = posts.filter((post) => {
+                    return post.text.includes(query);
+
+                });
+                return search;
 
 
+        } else {
+            return posts;
 
-
-
+        }
+    }, [posts, query])
 
 
   return (
     <div >
-      <Navigation  />
+      <Navigation value={query} onchange={(e) => setQuery(e.target.value)} />
       <Textarea
         type="submit"
         value={text}
@@ -65,7 +76,7 @@ function keyboard (e){
       />
         <div style={{ marginTop:"200px"}}>
 
-            {posts
+            {AllPosts
         .map((e, index) => (
           <Post
             key={index}

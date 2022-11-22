@@ -1,31 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0b816e51-942b-4103-bd03-f4ae4d7f9b09" name="Changes" comment="modal and keyPress">
-      <change afterPath="$PROJECT_DIR$/src/assets/img/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/myHooks/UseComments.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/navigation/nav.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/textarea/Textarea.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="0b816e51-942b-4103-bd03-f4ae4d7f9b09" name="Changes" comment="gitignore">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Login/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Login/Login.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/mainPage/mainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/mainPage/mainPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/profile/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/profile/Profile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/profile/Profile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/registration/Regpage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/registration/Regpage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/button/Mybutton.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/button/myButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/button/MyButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/input/Myinput.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/textarea/Textarea.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/input/myInput.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/modal/Mymodal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/modal/Mymodal.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/modal/myModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/modal/myModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/button/MyButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/button/MyButton.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/navigation/Nav.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation/Nav.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/posts/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/posts/Post.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/posts/Post.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/posts/Post.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/Router.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Router.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/style.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -137,7 +118,21 @@
       <option name="project" value="LOCAL" />
       <updated>1668269777969</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="style and comments">
+      <created>1668867215875</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1668867215875</updated>
+    </task>
+    <task id="LOCAL-00007" summary="gitignore">
+      <created>1668867375518</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1668867375518</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,7 +167,9 @@
     <MESSAGE value="add scroll and fix textarea" />
     <MESSAGE value="add textarea up" />
     <MESSAGE value="add change name" />
-    <option name="LAST_COMMIT_MESSAGE" value="add change name" />
+    <MESSAGE value="style and comments" />
+    <MESSAGE value="gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="gitignore" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -182,12 +179,6 @@
           <line>15</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/Pages/mainPage/mainPage.js</url>
-          <line>12</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
