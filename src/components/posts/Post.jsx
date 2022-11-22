@@ -3,7 +3,7 @@ import heart from '../../assets/img/heart.png';
 import { useState } from 'react';
 import {CommentsHr, Comments,Posts, Cross, Title, Likes, Heart } from './Post.js';
 import Mymodal from '../modal/Mymodal.jsx';
-import UseComments from "../myHooks/UseComments";
+import UseComments from "../myhooks/UseComments";
 import {Area} from "../textarea/Textarea";
 import {CommentsButton} from "../button/MyButton.js";
 

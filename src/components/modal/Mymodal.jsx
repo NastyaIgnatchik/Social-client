@@ -1,12 +1,12 @@
 import React from 'react';
-import { Open, Modal, Butt, Close } from './myModal.js';
+import { Open, Modal, Butt, Close } from './MyModal.js';
 import {Button, ModalButton} from "../button/MyButton.js";
 
 const Mymodal = (props) => {
 let Active = props.isActive;
 
 
-function foo (){
+function func (){
   props.del();
   props.tog();
 }
@@ -17,7 +17,7 @@ function foo (){
         <Open onClick={props.tog} >
           <Modal>
             Вы действительно хотите удалить пост?
-            <ModalButton onClick={foo} > Да</ModalButton>
+            <ModalButton onClick={func} > Да</ModalButton>
             <ModalButton onClick={props.tog}> Нет</ModalButton>
           </Modal>
         </Open>

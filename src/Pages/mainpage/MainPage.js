@@ -21,7 +21,7 @@ function MainPage() {
   function AddPost(e) {
     e.preventDefault();
       if(!text) {
-          return
+          return;
       }
     const obj = {
       text,

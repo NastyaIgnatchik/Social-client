@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/img/logo.png';
-import {Logo,Navbar,Input} from './nav.js'
+import {Logo,Navbar,Input} from './Nav.js'
 import {Button} from "../button/MyButton.js"
 
 
 
 const Navigation = (props) => {
     const link = props.link;
-    const display = props.display;
+
 
 
 

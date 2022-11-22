@@ -7,11 +7,9 @@ export const Button = styled.div`
   line-height: 40px;
   text-align: center;
   margin-right: 5px;
-  
   background:#337BAE;
   display: ${props => props.button || 'block'};
   margin-left: ${props => props.margin || '0'};
-  
   color: white;
   
   &:hover{

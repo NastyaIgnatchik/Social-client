@@ -4,7 +4,7 @@ import {
   ContainerReg,
   Title,
   LinkA,
-} from '../Login/Login.js';
+} from '../login/Login.js';
 import {ProfileForm, ProfileInput} from "../profile/Profile";
 import {LogButton} from "../../components/button/MyButton.js";
 
